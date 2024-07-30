@@ -1,17 +1,25 @@
-import React from 'react';
+import React from "react";
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const element = document.getElementById('root');
+const root = ReactDOM.createRoot(element);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const App = () => {
+    return <div>Selamat datang di tutror1</div>;
+};
+
+const App2 = () => {
+    const nonJSX = React.createElement("h1",{},"Ini componen non JSX");
+    const JSX = <div><h1>With JSX</h1></div>;
+    return JSX;
+}
+
+const App3 = () => {
+    const name = "Daud";
+    const age = 17;
+    return <div>
+        <p>Perkenalkan Saya {name} umur saya {age}</p>
+        </div>
+}
+
+root.render(<App3/>);
